@@ -1,8 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+  const user = localStorage.getItem('user');
+
+  const handleLogout = () => {
+    // Clear authentication state
+    localStorage.removeItem('isAuthenticated');
+    localStorage.removeItem('user');
+    // Redirect to login page
+    navigate('/login');
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-brand">
@@ -11,9 +23,20 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-links">
-        <Link to="/register" className="nav-link">Register</Link>
-        <Link to="/login" className="nav-link">Login</Link>
-        <Link to="/main" className="nav-link">Contacts</Link>
+        {isAuthenticated ? (
+          <>
+            <span className="welcome-text">Welcome, {user}!</span>
+            <Link to="/main" className="nav-link">Contacts</Link>
+            <button onClick={handleLogout} className="logout-button">
+              Logout
+            </button>
+          </>
+        ) : (
+          <>
+            <Link to="/register" className="nav-link">Register</Link>
+            <Link to="/login" className="nav-link">Login</Link>
+          </>
+        )}
       </div>
     </nav>
   );
