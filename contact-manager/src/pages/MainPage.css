@@ -2,6 +2,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  color: var(--text-color);
 }
 
 .main-header {
@@ -10,11 +11,11 @@
   align-items: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid var(--border-color);
 }
 
 .main-header h1 {
-  color: #333;
+  color: var(--text-color);
   margin: 0;
   font-size: 2rem;
 }
@@ -35,24 +36,24 @@
 }
 
 .main-content {
-  background-color: white;
+  background-color: var(--card-background);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow-color);
   padding: 2rem;
 }
 
 .add-contact-form {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background-color: #f8f9fa;
+  background-color: var(--background-color);
   border-radius: 8px;
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--border-color);
 }
 
 .empty-state {
   text-align: center;
   padding: 3rem;
-  color: #6c757d;
+  color: var(--secondary-color);
 }
 
 .empty-state h2 {

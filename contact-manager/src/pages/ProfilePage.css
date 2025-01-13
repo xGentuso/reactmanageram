@@ -1,22 +1,22 @@
-.login-container {
+.profile-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
+  padding: 2rem;
   background-color: var(--background-color);
 }
 
-.login-form {
+.profile-form {
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   padding: 2.5rem;
   background: var(--card-background);
   border-radius: 15px;
   box-shadow: 0 8px 20px var(--shadow-color);
 }
 
-.login-form h2 {
+.profile-form h2 {
   color: var(--text-color);
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -37,7 +37,8 @@
   font-weight: 500;
 }
 
-.form-group input {
+.form-group input,
+.form-group textarea {
   width: calc(100% - 1.75rem);
   padding: 0.875rem;
   font-size: 1rem;
@@ -48,18 +49,33 @@
   transition: all 0.3s ease;
 }
 
-.form-group input:focus {
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
   outline: none;
   border-color: var(--primary-color);
   box-shadow: 0 0 0 3px var(--input-focus-shadow);
 }
 
-.form-group input::placeholder {
-  color: var(--secondary-color);
+.avatar-preview {
+  margin-top: 1rem;
+  text-align: center;
 }
 
-.login-button {
-  width: calc(100% - 0px);
+.avatar-preview img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+}
+
+.save-button {
+  width: 100%;
   padding: 0.875rem;
   margin-top: 1rem;
   background-color: var(--primary-color);
@@ -72,31 +88,18 @@
   transition: all 0.3s ease;
 }
 
-.login-button:hover {
+.save-button:hover {
   background-color: var(--primary-color-hover);
   transform: translateY(-1px);
 }
 
-.login-button:active {
-  transform: translateY(0);
-}
-
-.form-footer {
-  margin-top: 2rem;
+.success-message {
+  background-color: var(--success-color);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
   text-align: center;
-  color: var(--text-color);
-  font-size: 0.95rem;
-}
-
-.form-footer a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 500;
-  margin-left: 0.5rem;
-}
-
-.form-footer a:hover {
-  text-decoration: underline;
 }
 
 .error-message {
@@ -105,6 +108,5 @@
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 1.5rem;
-  font-size: 0.9rem;
   text-align: center;
-}
+} 

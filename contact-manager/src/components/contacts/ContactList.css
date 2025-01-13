@@ -5,8 +5,8 @@
 }
 
 .contact-card {
-  background-color: white;
-  border: 1px solid #dee2e6;
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1.5rem;
   display: flex;
@@ -17,20 +17,17 @@
 
 .contact-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--shadow-color);
 }
 
 .contact-info h3 {
   margin: 0 0 1rem 0;
-  color: #333;
+  color: var(--text-color);
 }
 
 .contact-info p {
   margin: 0.5rem 0;
-  color: #666;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  color: var(--secondary-color);
 }
 
 .icon {
@@ -42,7 +39,7 @@
   gap: 0.5rem;
   margin-top: 1.5rem;
   padding-top: 1rem;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid var(--border-color);
 }
 
 .edit-button,
@@ -87,10 +84,13 @@
 }
 
 .contact-edit-form input {
+  background-color: var(--input-background);
+  color: var(--input-text);
+  border: 1px solid var(--border-color);
   padding: 0.5rem;
-  border: 1px solid #dee2e6;
+  margin-bottom: 0.5rem;
   border-radius: 4px;
-  font-size: 1rem;
+  width: 100%;
 }
 
 .edit-actions {

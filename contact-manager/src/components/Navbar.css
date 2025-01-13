@@ -1,10 +1,10 @@
 .navbar {
-  background-color: #333;
+  background-color: var(--navbar-bg);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px var(--shadow-color);
 }
 
 .navbar-brand {
@@ -13,7 +13,7 @@
 }
 
 .navbar-logo {
-  color: white;
+  color: var(--navbar-text);
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -29,7 +29,7 @@
 }
 
 .nav-link {
-  color: white;
+  color: var(--navbar-text);
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -41,7 +41,7 @@
 }
 
 .welcome-text {
-  color: #4dabf7;
+  color: var(--primary-color);
   font-weight: 500;
 }
 
@@ -58,6 +58,26 @@
 
 .logout-button:hover {
   background-color: #c82333;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--navbar-text);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 768px) {
